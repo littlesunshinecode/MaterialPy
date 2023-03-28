@@ -1,0 +1,14 @@
+input('Disciplina: ')
+x = input('Nome: ')
+y = float(input('1°B: '))+float(input('2°B: '))+float(input('3°B: '))+float(input('4°B: '))
+z = y/4
+
+if z >= 5.0:
+  if z >= 5.1:
+    print('Parabéns',x,'sua nota foi: {:.2f} pontos'.format(z))
+  else:
+    print(x,'ficou de recuperação')
+    print('Nota: {:.2f} pontos.'.format(z))
+else:
+ print('Infelizmente não foi dessa vez',x)
+ print('Sua nota foi: {:.2f} pontos'.format(z))
