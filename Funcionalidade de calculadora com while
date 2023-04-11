@@ -1,0 +1,55 @@
+while True:
+  num1 = input('Enter one number: ')
+  num2 = input('Enter another one: ')
+  operator = input('Chose an operator (+-/*): ')
+  print()
+
+  valid_operators = '+-/*'
+  valid_nums = None
+  
+  float_n1 = 0
+  float_n2 = 0
+
+  try:
+    float_n1 = float(num1)
+    float_n2 = float(num2)
+    valid_nums = True 
+
+  except:
+    valid_nums = None
+    print('Enter only valid numbers')
+    continue
+
+  if operator not in valid_operators:
+    print('Invalid operator.')
+    continue
+
+  if len(operator) > 1:
+    print('Only one operator each time, pls.')
+    continue
+
+  print('Operation result')
+  if operator == '+':
+    print(f'{float_n1} + {float_n2} = ', float_n1 + float_n2)
+    print()
+
+  elif operator == '-':
+    print(f'{float_n1} - {float_n2} = ', float_n1 - float_n2)
+    print()
+
+  elif operator == '/':
+    print(f'{float_n1} / {float_n2} = ', float_n1 / float_n2)
+    print()
+
+  elif operator == '*':  
+    print(f'{float_n1} * {float_n2} = ', float_n1 * float_n2)
+    print()
+    
+  sair = input('Wanna quit? [y/n]: ').lower().startswith('s' and 'y')
+
+  if sair is True:
+    print('See you later :D')
+    break
+
+  else:
+    continue
